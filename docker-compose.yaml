@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  evilginx2:
+    build: /opt/evilginx2
+    container_name: evilginx2
+    ports:
+      - 443:443
+      - 80:80 
+      - 53:53/udp
+
+  gophish:
+    build: /opt/gophish
+    container_name: "gophish"
+    ports:
+      - 3333:3333
+
+
